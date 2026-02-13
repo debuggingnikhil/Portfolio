@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikhil Kumar | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        background: '#0a0a0a',
+                        surface: '#171717',
+                        primary: '#ffffff',
+                        secondary: '#a1a1aa',
+                        accent: '#3b82f6'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+        }
+
+        .glass-card {
+            background: rgba(23, 23, 23, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-white selection:text-black">
+
+    <nav class="fixed top-0 w-full z-50 glass-card border-b border-white/5">
+        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="font-bold text-lg tracking-tight">NK.</a>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-secondary">
+                <a href="#home" class="hover:text-white transition-colors">Home</a>
+                <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+                <a href="#blogs" class="hover:text-white transition-colors">Blogs</a>
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+            </div>
+            <a href="mailto:nikhilkumar91020@gmail.com"
+                class="px-4 py-2 text-xs font-semibold bg-white text-black rounded-full hover:bg-gray-200 transition-colors">
+                Let's Talk
+            </a>
+        </div>
+    </nav>
+
+    <main class="max-w-3xl mx-auto px-6 pt-32 pb-20">
+
+        <section id="home" class="mb-24 fade-in">
+            <div class="flex items-start justify-between mb-8">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Nikhil Kumar</h1>
+                    <h2 class="text-xl text-secondary mb-6">Full Stack Developer</h2>
+                </div>
+                <div
+                    class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-gray-800 border border-gray-700 overflow-hidden flex items-center justify-center">
+                    <img src="photo.jpeg" alt="Nikhil Kumar" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <p class="text-secondary text-lg leading-relaxed mb-8 max-w-2xl">
+                Building & Learning in Public — I build modern, scalable web apps with a focus on performance, clean
+                design, and AI-powered experiences.
+            </p>
+
+            <div class="flex gap-4">
+                <a href="#projects"
+                    class="px-5 py-2.5 bg-white text-black text-sm font-medium rounded-lg hover:bg-gray-200 transition-colors">
+                    View Projects
+                </a>
+                <a href="#blogs"
+                    class="px-5 py-2.5 border border-white/20 text-white text-sm font-medium rounded-lg hover:bg-white/10 transition-colors">
+                    Read Blogs
+                </a>
+            </div>
+        </section>
+
+        <section id="projects" class="mb-24">
+            <h3 class="text-xl font-bold mb-8 flex items-center gap-2">
+                <i data-lucide="folder" class="w-5 h-5"></i> Projects
+            </h3>
+
+            <div class="grid gap-8">
+                <div
+                    class="group border border-white/10 rounded-xl p-6 hover:border-white/20 transition-colors bg-surface/50">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 bg-blue-900/30 rounded-lg flex items-center justify-center text-blue-400">
+                                <i data-lucide="code-2" class="w-5 h-5"></i>
+                            </div>
+                            <h4 class="font-bold text-lg">Fixlet</h4>
+                        </div>
+                        <span
+                            class="text-xs bg-green-900/30 text-green-400 px-2 py-1 rounded-full border border-green-800">Shipped</span>
+                    </div>
+                    <p class="text-secondary text-sm mb-4 leading-relaxed">
+                        An AI-powered code reviewer that analyzes submitted code and provides actionable suggestions,
+                        best practices, and quality improvements.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs text-secondary mb-4">
+                        <span class="px-2 py-1 bg-white/5 rounded">React</span>
+                        <span class="px-2 py-1 bg-white/5 rounded">NodeJS</span>
+                        <span class="px-2 py-1 bg-white/5 rounded">Gemini API</span>
+                    </div>
+                </div>
+
+                <div
+                    class="group border border-white/10 rounded-xl p-6 hover:border-white/20 transition-colors bg-surface/50">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 bg-purple-900/30 rounded-lg flex items-center justify-center text-purple-400">
+                                <i data-lucide="message-square" class="w-5 h-5"></i>
+                            </div>
+                            <h4 class="font-bold text-lg">Textro</h4>
+                        </div>
+                        <span
+                            class="text-xs bg-green-900/30 text-green-400 px-2 py-1 rounded-full border border-green-800">Shipped</span>
+                    </div>
+                    <p class="text-secondary text-sm mb-4 leading-relaxed">
+                        A sleek chatting application built for seamless and secure conversations with your friends.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs text-secondary">
+                        <span class="px-2 py-1 bg-white/5 rounded">React</span>
+                        <span class="px-2 py-1 bg-white/5 rounded">Socket.IO</span>
+                        <span class="px-2 py-1 bg-white/5 rounded">MongoDB</span>
+                    </div>
+                </div>
+
+                <div
+                    class="group border border-white/10 rounded-xl p-6 hover:border-white/20 transition-colors bg-surface/50">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 bg-yellow-900/30 rounded-lg flex items-center justify-center text-yellow-400">
+                                <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                            </div>
+                            <h4 class="font-bold text-lg">Campus Connect</h4>
+                        </div>
+                        <span
+                            class="text-xs bg-yellow-900/30 text-yellow-400 px-2 py-1 rounded-full border border-yellow-800">In
+                            Progress</span>
+                    </div>
+                    <p class="text-secondary text-sm mb-4 leading-relaxed">
+                        A platform designed to unify students across every college, bridging gaps left by scattered
+                        tools like WhatsApp and LinkedIn.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs text-secondary">
+                        <span class="px-2 py-1 bg-white/5 rounded">React</span>
+                        <span class="px-2 py-1 bg-white/5 rounded">Vite</span>
+                        <span class="px-2 py-1 bg-white/5 rounded">Tailwind</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-6 text-center">
+                <a href="#" class="text-sm text-secondary hover:text-white underline underline-offset-4">View all
+                    projects &rarr;</a>
+            </div>
+        </section>
+
+        <section id="blogs" class="mb-24">
+            <h3 class="text-xl font-bold mb-8 flex items-center gap-2">
+                <i data-lucide="pen-tool" class="w-5 h-5"></i> Writing
+            </h3>
+
+            <div class="space-y-6">
+                <a href="#" class="block group">
+                    <div class="flex justify-between items-baseline mb-1">
+                        <h4 class="font-medium group-hover:text-blue-400 transition-colors">Building a Complete RAG
+                            Pipeline</h4>
+                        <span class="text-xs text-gray-500">Jan 20, 2026</span>
+                    </div>
+                    <p class="text-sm text-secondary line-clamp-1">End-to-end RAG workflow with Gemini embeddings,
+                        Qdrant, and Groq Llama 3.3.</p>
+                </a>
+
+                <hr class="border-white/5">
+
+                <a href="#" class="block group">
+                    <div class="flex justify-between items-baseline mb-1">
+                        <h4 class="font-medium group-hover:text-blue-400 transition-colors">Running LLMs Locally v/s on
+                            Cloud</h4>
+                        <span class="text-xs text-gray-500">Jan 10, 2026</span>
+                    </div>
+                    <p class="text-sm text-secondary line-clamp-1">Hands-on notes comparing local Ollama vs cloud GPUs
+                        with Hugging Face.</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="mb-24">
+            <h3 class="text-xl font-bold mb-8 flex items-center gap-2">
+                <i data-lucide="map-pin" class="w-5 h-5"></i> My Journey
+            </h3>
+
+            <div class="border-l border-white/10 ml-3 space-y-12">
+                <div class="relative pl-8">
+                    <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 bg-blue-500 rounded-full"></div>
+                    <span class="text-xs font-mono text-blue-400 mb-1 block">2024 — Present</span>
+                    <h4 class="font-bold mb-2">Currently pursing BTECH CSE from NSHM Knowledge Campus, Durgapur and
+                        Exploring, Building, and Evolving</h4>
+                    <p class="text-sm text-secondary leading-relaxed">
+                        Currently focusing on Generative AI and integrating it into web products to create smarter user
+                        experiences.
+                    </p>
+                </div>
+
+                <div class="relative pl-8">
+                    <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 bg-gray-600 rounded-full"></div>
+                    <span class="text-xs font-mono text-gray-500 mb-1 block">2024</span>
+                    <h4 class="font-bold mb-2">Discovering Web Development and simultaniously passed intermediate exam
+                    </h4>
+                    <p class="text-sm text-secondary leading-relaxed">
+                        Started exploring HTML/CSS in my first year of college. Learned the fundamentals of building and
+                        styling web pages.
+                    </p>
+                </div>
+
+                <div class="relative pl-8">
+                    <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 bg-gray-600 rounded-full"></div>
+                    <span class="text-xs font-mono text-gray-500 mb-1 block">2022</span>
+                    <h4 class="font-bold mb-2">First Step into Coding and Passed my matriculation exam</h4>
+                    <p class="text-sm text-secondary leading-relaxed">
+                        Introduced to programming through Python. Initially challenging, but curiosity grew as I
+                        understood the logic behind it.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="mb-20 p-8 rounded-2xl bg-surface/30 border border-white/5 text-center">
+            <h3 class="text-2xl font-bold mb-3">Have a project in mind?</h3>
+            <p class="text-secondary text-sm mb-6">Drop your message and let's discuss about your project.</p>
+            <section id="links">
+                <div class="mt-6 flex justify-center gap-6 text-2xl">
+                    <a href="https://github.com/debuggingnikhil" target="_blank" class="hover:text-white transition"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/nikhil-kumar-728a19280" target="_blank"
+                        class="hover:text-white transition"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:nikhilkumar91020@gmail.com" class="hover:text-white transition"><i
+                            class="fas fa-envelope"></i></a>
+                </div>
+            </section>
+        </section>
+
+        <footer class="text-center pb-12 text-xs text-gray-600">
+            <p>&copy; 2026 Nikhil Kumar. Building and learning in public.</p>
+        </footer>
+
+    </main>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
