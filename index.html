@@ -176,20 +176,67 @@
         </section>
 
         <section id="blogs" class="mb-24">
-            <h3 class="text-xl font-bold mb-8 flex items-center gap-2">
-                <i data-lucide="pen-tool" class="w-5 h-5"></i> Writing
-            </h3>
+            <h2 style="font-size:28px; margin-bottom:30px; font-weight:700;">
+         ✍️ Blogs & Writing
+            </h2>
             <div>
-            <h3>Building AI-Powered Web Applications</h3>
-            <p>How I started integrating AI into full stack applications.</p>
-            <a href="blog1.html">Read Post →</a>
-            </div>
+            <style>
+        .blog-section {
+         max-width: 900px;
+         margin: 80px auto;
+         padding: 20px;
+        }
 
-            <div>
-            <h3>From CRUD Apps to Intelligent Systems</h3>
-            <p>How I evolved from basic apps to intelligent systems.</p>
-            <a href="blog2.html">Read Post →</a>
-            </div>
+        .blog-card {
+         background: #111827;
+         padding: 25px;
+         border-radius: 16px;
+         margin-bottom: 25px;
+         border: 1px solid #1f2937;
+         transition: 0.3s ease;
+         }
+
+        .blog-card:hover {
+         transform: translateY(-5px);
+         border-color: #3b82f6;
+         }
+
+        .blog-card h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        }
+
+        .blog-card p {
+         color: #9ca3af;
+         margin-bottom: 15px;
+         }
+
+        .read-btn {
+         color: #3b82f6;
+         text-decoration: none;
+         font-weight: 600;
+         }
+
+        .read-btn:hover {
+         text-decoration: underline;
+         }
+    </style>
+
+       <div class="blog-section">
+
+  <div class="blog-card">
+    <h3>Building AI-Powered Web Applications</h3>
+    <p>How I started integrating AI into full stack applications.</p>
+    <a href="blog1.html" class="read-btn">Read Post →</a>
+  </div>
+
+  <div class="blog-card">
+    <h3>From CRUD Apps to Intelligent Systems</h3>
+    <p>How I evolved from basic apps to intelligent systems.</p>
+    <a href="blog2.html" class="read-btn">Read Post →</a>
+  </div>
+
+</div>
         </section>
 
         <section id="about" class="mb-24">
