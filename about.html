@@ -1,82 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>About - Nikhil Kumar</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About - Nikhil Kumar</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+
+/* Animated glowing background */
+body {
+    background: radial-gradient(circle at 20% 30%, #0f172a, #020617 60%);
+    overflow-x: hidden;
+}
+
+/* Blue animated glow blob */
+.glow-bg::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(0,119,255,0.4), transparent 70%);
+    filter: blur(120px);
+    animation: moveGlow 8s infinite alternate ease-in-out;
+    z-index: 0;
+}
+
+@keyframes moveGlow {
+    from { transform: translate(-100px, -50px); }
+    to { transform: translate(150px, 100px); }
+}
+
+/* Glass card */
+.glass {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Neon hover glow */
+.glass:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 0 25px rgba(59,130,246,0.6);
+    transform: translateY(-5px);
+    transition: 0.4s ease;
+}
+
+</style>
+
 </head>
 
-<body class="bg-[#0a0a0a] text-white antialiased">
+<body class="text-white relative glow-bg">
 
-    <!-- Navbar -->
-    <nav class="fixed top-0 w-full z-50 backdrop-blur-lg bg-black/30 border-b border-white/10">
-        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="index.html" class="font-bold text-lg tracking-tight">NK.</a>
+<!-- Navbar -->
+<nav class="fixed top-0 w-full z-50 backdrop-blur-lg bg-black/30 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+        <a href="index.html" class="font-bold text-lg tracking-widest text-blue-400">
+            NK.
+        </a>
 
-            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
-                <a href="index.html" class="hover:text-white transition">Home</a>
-                <a href="about.html" class="text-white">About</a>
+        <div class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
+            <a href="index.html" class="hover:text-blue-400 transition">Home</a>
+            <a href="about.html" class="text-blue-400">About</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<main class="relative z-10 max-w-6xl mx-auto px-6 pt-32 pb-24">
+
+    <h1 class="text-5xl font-extrabold mb-8 text-blue-400 tracking-wide">
+        About Me
+    </h1>
+
+    <p class="text-gray-400 leading-8 max-w-3xl mb-16 text-lg">
+        I am a passionate 2nd year B.Tech Computer Science Engineering student 
+        and an aspiring Full Stack Developer. I focus on building scalable, 
+        performance-driven web applications and integrating modern AI systems 
+        into real-world solutions. My mission is to evolve into a highly skilled 
+        software engineer capable of designing next-generation digital systems.
+    </p>
+
+    <!-- Skill Boxes -->
+    <div class="grid md:grid-cols-2 gap-12">
+
+        <!-- Learned -->
+        <div class="glass p-10 rounded-3xl transition duration-500">
+            <h2 class="text-2xl font-semibold text-blue-400 mb-8 tracking-wide">
+                What I Have Mastered
+            </h2>
+
+            <div class="grid grid-cols-2 gap-4 text-gray-300">
+                <span>C</span>
+                <span>C++</span>
+                <span>Java</span>
+                <span>Python</span>
+                <span>DSA</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Frontend Dev</span>
             </div>
         </div>
-    </nav>
 
-    <!-- About Section -->
-    <main class="max-w-5xl mx-auto px-6 pt-32 pb-20">
+        <!-- Learning -->
+        <div class="glass p-10 rounded-3xl transition duration-500">
+            <h2 class="text-2xl font-semibold text-blue-400 mb-8 tracking-wide">
+                Currently Advancing In
+            </h2>
 
-        <h1 class="text-4xl md:text-5xl font-bold mb-6">
-            About Me
-        </h1>
-
-        <p class="text-gray-400 leading-8 mb-14 max-w-3xl">
-            I am a passionate 2nd year B.Tech Computer Science Engineering student 
-            and an aspiring Full Stack Developer. I have developed strong problem-solving 
-            abilities through Data Structures and Algorithms and built dynamic web 
-            interfaces using modern frontend technologies. I am currently expanding 
-            my expertise in backend systems, cloud computing, and Generative AI 
-            to become a well-rounded software engineer.
-        </p>
-
-        <!-- Skills Boxes -->
-        <div class="grid md:grid-cols-2 gap-10">
-
-            <!-- Learned Box -->
-            <div class="bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-blue-500/40 transition duration-300">
-                <h2 class="text-xl font-semibold mb-6 text-blue-400">
-                    What I Have Learned
-                </h2>
-
-                <ul class="space-y-3 text-gray-300">
-                    <li>C</li>
-                    <li>C++</li>
-                    <li>Java</li>
-                    <li>Python</li>
-                    <li>Data Structures & Algorithms</li>
-                    <li>HTML & CSS</li>
-                    <li>JavaScript</li>
-                    <li>Frontend Development</li>
-                </ul>
+            <div class="grid grid-cols-2 gap-4 text-gray-300">
+                <span>Next.js</span>
+                <span>Cloud Computing</span>
+                <span>SQL</span>
+                <span>Generative AI</span>
+                <span>Data Analysis</span>
+                <span>Backend Dev</span>
             </div>
-
-            <!-- Learning Box -->
-            <div class="bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-blue-500/40 transition duration-300">
-                <h2 class="text-xl font-semibold mb-6 text-blue-400">
-                    What I’m Currently Learning
-                </h2>
-
-                <ul class="space-y-3 text-gray-300">
-                    <li>Next.js</li>
-                    <li>Cloud Computing</li>
-                    <li>SQL</li>
-                    <li>Generative AI</li>
-                    <li>Data Analysis</li>
-                    <li>Backend Development</li>
-                </ul>
-            </div>
-
         </div>
 
-    </main>
+    </div>
+
+</main>
 
 </body>
 </html>
