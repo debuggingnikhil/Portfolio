@@ -18,13 +18,15 @@ body {
 /* Blue animated glow blob */
 .glow-bg::before {
     content: "";
-    position: absolute;
+    position: fixed;   /* change from absolute */
+    top: 0;
+    left: 0;
     width: 500px;
     height: 500px;
     background: radial-gradient(circle, rgba(0,119,255,0.4), transparent 70%);
     filter: blur(120px);
     animation: moveGlow 8s infinite alternate ease-in-out;
-    z-index: 0;
+    z-index: -1;   /* IMPORTANT */
 }
 
 @keyframes moveGlow {
@@ -98,7 +100,7 @@ body {
 </nav>
 
 <!-- Main Content -->
-<main class="relative z-10 max-w-6xl mx-auto px-6 pt-32 pb-24">
+<main class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 pt-28 sm:pt-32 pb-20 sm:pb-24">
 
     <h1 class="text-5xl font-extrabold mb-8 text-blue-400 tracking-wide">
         About Me
