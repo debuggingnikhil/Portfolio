@@ -43,21 +43,39 @@
 
 <body class="antialiased selection:bg-white selection:text-black">
 
-    <nav class="fixed top-0 w-full z-50 glass-card border-b border-white/5">
-        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="#" class="font-bold text-lg tracking-tight">NK.</a>
-            <div class="flex gap-8 text-sm font-medium text-secondary">
-                <a href="#home" class="hover:text-white transition-colors">Home</a>
-                <a href="#projects" class="hover:text-white transition-colors">Projects</a>
-                <a href="#blogs" class="hover:text-white transition-colors">Blogs</a>
-                <a href="about.html" class="hover:text-white transition-colors">About</a>
-            </div>
-            <a href="mailto:nikhilkumar91020@gmail.com"
-                class="px-4 py-2 text-xs font-semibold bg-white text-black rounded-full hover:bg-gray-200 transition-colors">
-                Let's Talk
-            </a>
-        </div>
-    </nav>
+    <nav class="fixed top-0 w-full bg-black/80 backdrop-blur-md border-b border-white/10 z-50">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+
+    <!-- Logo -->
+    <a href="#" class="text-white text-xl font-bold">NK.</a>
+
+    <!-- Hamburger Button (Mobile Only) -->
+    <button id="menu-btn" class="md:hidden text-white text-2xl">
+      ☰
+    </button>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex gap-8 text-sm font-medium text-gray-300 items-center">
+      <a href="#home" class="hover:text-white transition">Home</a>
+      <a href="#projects" class="hover:text-white transition">Projects</a>
+      <a href="#blogs" class="hover:text-white transition">Blogs</a>
+      <a href="#about" class="hover:text-white transition">About</a>
+      <a href="#contact" class="bg-white text-black px-4 py-2 rounded-full">Let's Talk</a>
+    </div>
+
+  </div>
+
+  <!-- Mobile Dropdown -->
+  <div id="mobile-menu" class="hidden md:hidden bg-black border-t border-white/10">
+    <div class="flex flex-col items-center gap-6 py-6 text-gray-300 text-lg">
+      <a href="#home" class="hover:text-white">Home</a>
+      <a href="#projects" class="hover:text-white">Projects</a>
+      <a href="#blogs" class="hover:text-white">Blogs</a>
+      <a href="#about" class="hover:text-white">About</a>
+      <a href="#contact" class="bg-white text-black px-6 py-2 rounded-full">Let's Talk</a>
+    </div>
+  </div>
+</nav>
 
     <main class="max-w-3xl mx-auto px-6 pt-32 pb-20">
     
@@ -348,6 +366,18 @@
         // Initialize Icons
         lucide.createIcons();
     </script>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", function () {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+});
+</script>
 </body>
 
 </html>
